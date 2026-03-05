@@ -1,0 +1,126 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 280px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  width: 100%;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-form:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.search-icon {
+  font-size: var(--font-size-sm);
+  opacity: 0.6;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  outline: none;
+  min-width: 0;
+  padding: var(--spacing-xs) 0;
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.search-input:disabled {
+  opacity: 0.7;
+}
+
+.search-submit,
+.search-clear {
+  background: none;
+  border: none;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.search-submit {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+.search-submit:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.search-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.search-clear {
+  font-size: var(--font-size-lg);
+  padding: 0 var(--spacing-xs);
+}
+
+.search-clear:hover {
+  color: var(--text-primary);
+}
+
+/* Active search badge - displayed in FilterBar */
+.search-active-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--primary-color);
+  color: white;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.search-active-badge button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  padding: 0;
+  margin-left: var(--spacing-xs);
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background var(--transition-fast);
+}
+
+.search-active-badge button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+  .search-bar {
+    max-width: 350px;
+  }
+}

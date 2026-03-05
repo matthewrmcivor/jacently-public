@@ -1,0 +1,225 @@
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  background: var(--background);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: var(--shadow-sm);
+}
+
+.app-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.app-header-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.icon-button:hover {
+  background: var(--surface);
+}
+
+.radius-control {
+  padding: var(--spacing-md);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.radius-control label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.radius-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--border-color);
+  outline: none;
+  margin-bottom: var(--spacing-md);
+  -webkit-appearance: none;
+}
+
+.radius-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.radius-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  border: none;
+}
+
+.radius-quick-select {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.radius-btn {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.radius-btn:hover {
+  background: var(--surface);
+}
+
+.radius-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.view-toggle {
+  display: flex;
+  padding: var(--spacing-md);
+  gap: var(--spacing-sm);
+  background: var(--background);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.toggle-btn:hover {
+  background: var(--border-color);
+}
+
+.toggle-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.app-main {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-container-wrapper {
+  width: 100%;
+  height: calc(100vh - 300px);
+  min-height: 400px;
+  position: relative;
+}
+
+.list-container {
+  padding: var(--spacing-md);
+  overflow-y: auto;
+  height: calc(100vh - 300px);
+  min-height: 400px;
+}
+
+.calendar-container-wrapper {
+  width: 100%;
+  height: calc(100vh - 300px);
+  min-height: 500px;
+  padding: var(--spacing-md);
+  overflow: hidden;
+}
+
+.friends-container {
+  padding: var(--spacing-md);
+  height: calc(100vh - 300px);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--text-secondary);
+}
+
+.empty-state p {
+  margin: var(--spacing-sm) 0;
+}
+
+.empty-state-subtext {
+  font-size: var(--font-size-sm);
+}
+
+@media (min-width: 768px) {
+  .app-header {
+    padding: var(--spacing-lg);
+  }
+
+  .app-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .map-container-wrapper {
+    height: calc(100vh - 250px);
+  }
+
+  .list-container {
+    height: calc(100vh - 250px);
+    padding: var(--spacing-lg);
+  }
+
+  .calendar-container-wrapper {
+    height: calc(100vh - 250px);
+    padding: var(--spacing-lg);
+  }
+
+  .friends-container {
+    height: calc(100vh - 250px);
+  }
+}
+
